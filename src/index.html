@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <!--<meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="-1" />-->
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <meta Http-Equiv="Cache-Control" Content="no-cache">
+  <meta Http-Equiv="Expires" Content="0">
+  <meta Http-Equiv="Cache-directive: no-cache">
+  
+  <title>PGC Information Pages</title>
+  <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="http://www.pgc.umn.edu/sites/www.pgc.umn.edu/themes/pgc/favicon.ico">
+  <link href="main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div id="header" class="gradient color-white">
+  	<div id="title" class="all-caps">Information Pages</div>
+    <div id="fullScreenActivate">
+      <div id="fullScreenButton" class="all-caps text-sm">Go Full Screen</div>
+    </div>
+  </div>
+  <div id="display"></div>
+  <div id="scroller">
+      <table id="userTable" class="gradient table-tight">
+        <tr>
+        	<td rowspan="2"><img id="userWxIcon" class="fit" alt="Weather Icon" src='images/wx-no-image.png' width="64" height="64" /></td>
+        	<td colspan="2" class="text-nm color-white" id="userLocation"></td>
+        </tr>
+        <tr>
+          <td class="text-nm color-white" id="userTimeLocal"></td>
+          <td class="text-nm color-aux-blue" id="userTimeDate"></td>
+        </tr>
+      </table>
+      <div id="scrollerContent" class="gradient-black">
+      	<div id="scrollerHeader" class="color-white">Up Next</div>
+        <div id="scrollerTicker"></div>
+      	<ul id="scrollerRow" class="text-sm"></ul>
+      </div>
+  </div>
+	<script src="settings.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

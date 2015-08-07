@@ -1,0 +1,44 @@
+{
+  "name": "pgc-infopages",
+  "version": "1.0.0",
+  "description": "Web application for polar-related data & map feeds for TV or high-resolution digital display.",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build",
+    "dist": "gulp dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PolarGeospatialCenter/pgc-info-pages.git"
+  },
+  "keywords": [
+    "Polar",
+    "Geospatial",
+    "Center",
+    "PGC",
+    "polar",
+    "information",
+    "pages",
+    "Arctic",
+    "Antarctica"
+  ],
+  "author": "Brad Herried <herri147@umn.edu> (http://www.pgc.umn.edu/about/people/herried)",
+  "license": "MIT",
+  "browser": "./src/js/settings.js",
+  "devDependencies": {
+    "browser-sync": "^2.6.9",
+    "browserify": "^10.0.0",
+    "gulp": "^3.8.11",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-uglify": "^1.2.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "moment": "^2.10.2",
+    "moment-timezone": "^0.3.1",
+    "screenfull": "^2.0.0"
+  }
+}
