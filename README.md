@@ -42,17 +42,17 @@ The PGC Information Pages is a stand-alone web application that displays a conti
 This is the simplest option with no customizations. It will always deploy the latest release of this application.
 > Your location will not be updated. It will display St. Paul, Minnesota.
 
-1. On the host machine, point a web browser to the following URL:
+1. On the host machine, point a web browser to the following URL:   
 `http://applications.pgc.umn.edu/infopages`
 2. Within the application, click the "GO FULL SCREEN" button in the top-right corner
 
 ### Option 2: Self-Hosted
 This configuration allows you to customize your location and deploy on your own web server.
 
-1. Download and unzip the latest release:
-`https://github.com/PolarGeospatialCenter/pgc-info-pages/releases/latest`
-2. Edit the `settings.js` file for your location (zip code, city/state/country, or latitude/longitude)
-3. Copy the files to a publicly-accessible location on your web server
+1. Download and unzip the latest release:   
+ https://github.com/PolarGeospatialCenter/pgc-info-pages/releases/latest
+2. Edit the `dist/settings.js` file for your location (zip code, city/state/country, or latitude/longitude)
+3. Copy the *entire* contents of the `dist` directory to a publicly-accessible location on your web server
 4. Point a web browser to the directory containing the `index.html` file
 5. Within the application, click the "GO FULL SCREEN" button in the top-right corner
 
