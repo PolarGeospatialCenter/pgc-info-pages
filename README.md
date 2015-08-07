@@ -3,12 +3,14 @@ The PGC Information Pages is a stand-alone web application that displays a conti
 ### Screenshots
 #### Welcome Screen
 > Initial screen on load
-> ![Welcome Screen](/images/ss-welcome.jpg "Welcome Screen")
+ 
+![Welcome Screen](/images/ss-welcome.jpg "Welcome Screen")
 
 #### MODIS Polar Mosaics
 > Daily imagery from MODIS Terra
 > * Most recent Arctic & Antarctic mosaics
-> ![MODIS Polar Mosaics](/images/ss-modis.jpg "MODIS Polar Mosaics")
+
+![MODIS Polar Mosaics](/images/ss-modis.jpg "MODIS Polar Mosaics")
 
 #### DigitalGlobe, Inc. Collections
 > Index to DigitalGlobe imagery collection
@@ -16,7 +18,8 @@ The PGC Information Pages is a stand-alone web application that displays a conti
 > * Map of mono/stereo collection
 > * Features 1-day, 7-day, 1-month, 9-month collections
 > * Global and polar versions
-> ![DigitalGlobe Collection 7-Day](/images/ss-modis.jpg "DigitalGlobe Collection 7-Day")
+
+![DigitalGlobe Collection 7-Day](/images/ss-modis.jpg "DigitalGlobe Collection 7-Day")
 
 #### Facilities & Research Sites
 > Local information for select NSF or polar locations
@@ -25,12 +28,14 @@ The PGC Information Pages is a stand-alone web application that displays a conti
 > * Most recent MODIS Terra & Aqua
 > * Webcam (if available)
 > * Nearby Vessels (if available)
-> * ![Barrow, Alaska](/images/ss-modis.jpg "Barrow, Alaska")
+
+![Barrow, Alaska](/images/ss-modis.jpg "Barrow, Alaska")
 
 #### Day/Night Map
 > Arctic & Antarctic day/night maps
 > * Note: satellite imagery is not updated
-> ![Day/Night](/images/ss-modis.jpg "Day/Night")
+
+![Day/Night](/images/ss-modis.jpg "Day/Night")
 
 ## How to run the information pages
 ### Option 1: Run from PGC
@@ -49,3 +54,36 @@ This configuration allows you to customize which pages are displayed.
 2. Within the application, click the "GO FULL SCREEN" button in the top-right corner.
 
 ## Credits & Data Sources
+#### Webcams
+* United States Antarctic Program (McMurdo Station, Palmer Station)
+  http://www.usap.gov/videoclipsandmaps/mcmwebcam.cfm
+  http://www.usap.gov/videoclipsandmaps/palWebCam.cfm
+* NOAA Earth System Research Laboratory (South Pole)
+  http://www.esrl.noaa.gov/gmd/obop/spo/livecamera.html
+* University of Alaska - Fairbanks Sea Ice Group (Barrow)
+  http://seaice.alaska.edu/gi/observatories/barrow_webcam
+* Toolik Field Station (Toolik)
+  http://toolik.alaska.edu/edc
+* College of Science & Engineering (University of Minnesota)
+  http://cse.umn.edu/dashboard/webcam
+* CH2M Hill Polar Services (Summit Station)
+  http://www.summitcamp.org/status/webcam
+
+
+#### Data & Photographs
+* NASA Worldview Application (MODIS Satellite Imagery)
+  https://earthdata.nasa.gov/labs/worldview
+* DigitalGlobe, Inc. (Satellite Imagery Acquistion)
+  http://www.digitalglobe.com
+* MarineTraffic.org (Vessel Maps)  
+  http://www.marinetraffic.org
+* Fourmilab (Earth & Moon Viewer)
+  http://www.fourmilab.ch/earthview
+* World Weather Online (Weather API)
+  http://www.worldweatheronline.com
+
+#### Development
+* jQuery
+  http://www.jquery.com
+* Moment.js
+  http://momentjs.com
