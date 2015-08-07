@@ -19,7 +19,7 @@ The PGC Information Pages is a stand-alone web application that displays a conti
 > * Features 1-day, 7-day, 1-month, 9-month collections
 > * Global and polar versions
 
-![DigitalGlobe Collection 7-Day](/images/ss-modis.jpg "DigitalGlobe Collection 7-Day")
+![DigitalGlobe Collection 7-Day](/images/ss-dg-7day.jpg "DigitalGlobe Collection 7-Day")
 
 #### Facilities & Research Sites
 > Local information for select NSF or polar locations
@@ -29,13 +29,13 @@ The PGC Information Pages is a stand-alone web application that displays a conti
 > * Webcam (if available)
 > * Nearby Vessels (if available)
 
-![Barrow, Alaska](/images/ss-modis.jpg "Barrow, Alaska")
+![Barrow, Alaska](/images/ss-site-barrow.jpg "Barrow, Alaska")
 
 #### Day/Night Map
 > Arctic & Antarctic day/night maps
 > * Note: satellite imagery is not updated
 
-![Day/Night](/images/ss-modis.jpg "Day/Night")
+![Day/Night](/images/ss-daynight.jpg "Day/Night")
 
 ## How to run the information pages
 ### Option 1: Run from PGC
