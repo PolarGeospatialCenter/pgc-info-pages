@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+
+<body>
+<div style="width:100%; height:100%; margin:0; padding:0;">
+<script type="text/javascript">
+    width='100%';		    //the width of the embedded map in pixels or percentage
+    height='100%';		    //the height of the embedded map in pixels or percentage
+    border='0';			    //the width of the border around the map (zero means no border)
+    shownames='true';		//to display ship names on the map (true or false)
+    zoom='6';			    //the zoom level of the map (values between 2 and 17)
+    maptype='2';		    //use 0 for Normal map, 1 for Satellite, 2 for Hybrid, 3 for Terrain
+    trackvessel='';		//MMSI of a vessel (note: it will displayed only if within range of the system)
+    fleet='';			    //the registered email address of a user-defined fleet
+    remember='false';		//remember or not the last position of the map (true or false)
+    language='en';		    //the preferred display language
+    showmenu=true;		    //show or hide thee map options menu
+		
+		(function() {
+
+    if ("https:" == document.location.protocol) {
+        /* secure */
+        var src = 'https://www.marinetraffic.com/';
+    } else {
+        /* unsecure */
+        var src = 'http://www.marinetraffic.com/';
+    }
+
+    if ((window.latitude === undefined) && (window.longitude === undefined) && (window.fleet !== undefined)) {
+        window.latitude = 0;
+        window.longitude = 0;
+    }
+		
+		console.log(window.zoom);
+    document.write(
+        '<iframe name="marinetraffic" id="marinetraffic"' + ' width="' + ((window.width === undefined) ? '550' : width) + '"' + ' height="' + ((window.height === undefined) ? '300' : height) + '"' + ' scrolling="no" frameborder="' + ((window.border === undefined) ? '0' : border) + '"' + ' src="' + src + ((window.language === undefined) ? 'en' : language) + '/ais/embed' + '/zoom:' + ((window.zoom === undefined) ? '14' : zoom) + '/centery:' + ((window.latitude === undefined) ? '36' : latitude) + '/centerx:' + ((window.longitude === undefined) ? '23' : longitude) + '/maptype:' + ((window.maptype === undefined) ? '4' : maptype) + '/shownames:' + ((window.shownames === undefined) ? 'false' : shownames) + '/mmsi:' + ((window.trackvessel === undefined) ? '0' : trackvessel) + '/fleet:' + ((window.fleet === undefined) ? '' : fleet) + '/showmenu:' + ((window.showmenu === undefined) ? '' : showmenu) + '/remember:' + ((window.remember === undefined) ? 'false' : remember) + '">Browser does not support embedded objects.<br/>Visit directly <a href="http://www.marinetraffic.com/">www.marinetraffic.com</a>' + '</iframe>\n'
+    );
+
+})()
+</script>
+</div>
+</body>
+</html>
