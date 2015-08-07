@@ -7,19 +7,19 @@ var screenfull = require('screenfull');
 window.pageRender = '';
 
 $(function () {
-	
+
 	var index = 0;
-		
+
 	// Configuration
 	var timeFormat = 'HH:mm:ss';
 	var timeFormatAP = 'h:mm:ss A';
 	var dateFormat = 'MMMM Do, YYYY';
 	var dateFormatAP = 'ddd, MMM Do';
-	
+
 	var fadeOutDur = 250;
 	var fadeInDur = 500;
 	var secondsInterval = null;
-	
+
 	// Setup Fullscreen
 	$('#fullScreenButton').on('click', function() {
 	  if (screenfull.enabled) {
@@ -34,14 +34,13 @@ $(function () {
 		$('#fullScreenButton').css('color','#FFFFFF');
 	  }
 	});
-	
+
 	$(window).resize(function() {
 		$('#scroller #scrollerRow li').css('min-width',Math.round($('#scrollerRow').width()/7) + 'px');
 	});
-	
+
 	// Get User Time and Location
 	var userLocation = '';
-	
 
 	if (settings.location.zip) {
 		userLocation = settings.location.zip;
@@ -55,7 +54,7 @@ $(function () {
 	else {
 		userLocation = 55108; // Defaults to Saint Paul, Minnesota
 	}
-	
+
 	$.get('http://api.worldweatheronline.com/free/v2/weather.ashx',
 		{
 			q :	userLocation,
@@ -68,35 +67,35 @@ $(function () {
 			$('#userLocation').html(response.data.nearest_area[0].areaName[0].value + ', ' + response.data.nearest_area[0].region[0].value);
 		}
 	);
-	
-	
-	
+
+
+
 	$('#userTimeLocal').html(moment().format(timeFormatAP));
 	$('#userTimeDate').html(moment().format(dateFormatAP));
-	
+
 	function localSecondsTick() {
 		$('#userTimeLocal').html(moment().format(timeFormatAP));
 		$('#scrollerTicker span').last().remove();
 	}
 	setInterval(localSecondsTick,1000); // Set Ticker
-		
+
 	// Remove 'pages.visible == false'
 	var tmp = [];
 	for (i=0; i<pages.length; i++) {
 		if (pages[i].visible == true) {
 			tmp.push(pages[i]);
-		}	
+		}
 	}
 
 	pages = tmp;
-	
+
 	// Main rendering function for each page
-	function render() {	
+	function render() {
 		if (secondsInterval) { clearInterval(secondsInterval); }
 		var pageData = pages[index];
 
 		// Update Scroller
-		$.get("tpl/scroller.html", function(data) { 
+		$.get("tpl/scroller.html", function(data) {
 			var tpl = $(data);
 			var row = $('#scrollerRow');
 			var html = '';
@@ -106,7 +105,7 @@ $(function () {
 				if (v>=pages.length) { v=0+a;a++; }
 				html += '<li><div class="gradient-black">'+pages[v].infoName+'</div></li>';
 			}
-			
+
 			tpl.html(html);
 
 			row.html(tpl);
@@ -118,23 +117,23 @@ $(function () {
 				$('#scrollerRow').fadeIn(fadeInDur);
 				$('#scroller #scrollerRow li').css('min-width',Math.round($('#scrollerRow').width()/7) + 'px');
 			});
-			
+
 			// Set Scroller Ticker
 			var dots = '';
 			for (var i=0; i<pageData.displayLength; i++) {
 				dots+='<span>&middot;</span>';
 			}
 			$('#scrollerTicker').html(dots);
-		},'html');	
-		
+		},'html');
+
 		// Update Display
 		var div = $('#display');
-		
+
 		if (pageData.visible == true) {
-		
+
 			switch(pageData.template) {
-			
-				case 'intro':				
+
+				case 'intro':
 					$.get('tpl/'+pageData.template+'.html',function(data) {
 						var tpl = $(data);
 
@@ -147,13 +146,13 @@ $(function () {
 						});
 					},'html');
 					break;
-					
+
 				case 'vessels':
 					$.get('tpl/'+pageData.template+'.html',function(data) {
 						var tpl = $(data);
 						tpl.find('#vesselName').html(pageData.vessel.name);
 						tpl.find('#marinetraffic').attr('src','http://www.marinetraffic.com/en/ais/embed/zoom:'+pageData.vessel.zoom+'/centery:0/centerx:0/maptype:2/shownames:true/mmsi:'+pageData.vessel.mmsi+'/fleet:/showmenu:false/remember:false');
-					
+
 						//div.replaceWith(tpl);
 						div.html(tpl);
 						div.fadeOut(fadeOutDur, function() {
@@ -165,12 +164,12 @@ $(function () {
 					break;
 
 				case 'modismosaic':
-					$.get("tpl/modismosaic.html", function(data) { 
+					$.get("tpl/modismosaic.html", function(data) {
 						var tpl = $(data);
-					
+
 						var latest=moment().subtract(1,'d');
 						tpl.find('#modisMosaicDate').html(latest.format(dateFormat));
-						
+
 						// Replace
 						div.fadeOut(fadeOutDur, function() {
 							tpl.hide();
@@ -179,11 +178,11 @@ $(function () {
 						});
 					},'html');
 					break;
-				
+
 				case 'locations':
 					$.get("tpl/locations.html", function(data) {
 						var tpl = $(data);
-					
+
 						// Webcam
 						if (pageData.webcam.show == true) {
 							if (pageData.webcam.query) {
@@ -206,15 +205,15 @@ $(function () {
 						else {
 							tpl.find('.content-webcam').html('');
 							tpl.find('.content-webcam').hide();
-						}	
-							
+						}
+
 						// InfoBox
 						tpl.find('#infoName').html(pageData.infoName);
 						tpl.find('#infoRegion').html(pageData.infoRegion);
 						tpl.find('#infoLat').html(pageData.infoLat + '°');
 						tpl.find('#infoLon').html(pageData.infoLon  + '°');
 						//tpl.find('#infoPhoto').attr('src',pageData.infoPhoto);
-						
+
 						// TimeBox
 						function secondsTick() {
 							$('#timeLocal').html(moment().tz(pageData.timeZone).format(timeFormat));
@@ -222,7 +221,7 @@ $(function () {
 						tpl.find('#timeLocal').html(moment().tz(pageData.timeZone).format(timeFormat));
 						tpl.find('#timeDate').html(moment().tz(pageData.timeZone).format(dateFormat));
 						tpl.find('#timeZone').html(moment().tz(pageData.timeZone).format('Z') + ' UTC');
-						
+
 						// WxBox
 						$.get('http://api.worldweatheronline.com/free/v2/weather.ashx',
 					    	{
@@ -241,7 +240,7 @@ $(function () {
 								tpl.find('#wxIcon').attr('src',response.data.current_condition[0].weatherIconUrl[0].value);
 							},"json"
 						);
-											
+
 						// MODIS
 						if (pageData.modis.show == true) {
 							var prev=moment().tz(pageData.timeZone).subtract(2,'d');
@@ -251,7 +250,7 @@ $(function () {
 							//var modisLatestUrl=pageData.modis.url.replace('zzzzzzz',latest.format('YYYY') + latest.format('DDD'));
 							var modisPrevUrl=pageData.modis.url+'2day.jpg';
 							var modisLatestUrl=pageData.modis.url+'1day.jpg';
-							
+
 							if (pageData.modis.rotation == 270) {
 								tpl.find('#modisPrevUrl').addClass('rotate270');
 								tpl.find('#modisLatestUrl').addClass('rotate270');
@@ -267,7 +266,7 @@ $(function () {
 							tpl.find('.content-modis').html('');
 							tpl.find('.content-modis').hide();
 						}
-									
+
 						// Vessels
 						if (pageData.vessel.show == true) {
 							tpl.find('#marinetraffic').attr('src','http://www.marinetraffic.com/en/ais/embed/zoom:'+pageData.vessel.zoom+'/centery:'+pageData.infoLat+'/centerx:'+pageData.infoLon+'/maptype:2/border:0/shownames:true/remember:false/fleet:lpaul@umn.edu/showmenu:false');
@@ -276,7 +275,7 @@ $(function () {
 							tpl.find('.content-vessels').html('');
 							tpl.find('.content-vessels').hide();
 						}
-							
+
 						secondsInterval = setInterval(secondsTick,1000); // Location's time
 						div.fadeOut(fadeOutDur, function() {
 							tpl.hide();
@@ -285,11 +284,11 @@ $(function () {
 						});
 					},'html');
 					break;
-				
+
 				case 'credits':
 					$.get("tpl/credits.html", function(data) {
 						var tpl = $(data);
-					
+
 						// Replace
 						div.fadeOut(fadeOutDur, function() {
 							tpl.hide();
@@ -299,11 +298,11 @@ $(function () {
 						});
 					},'html');
 					break;
-				
+
 				case 'daynight':
 					$.get("tpl/daynight.html", function(data) {
 						var tpl = $(data);
-					
+
 						// Replace
 						div.fadeOut(fadeOutDur, function() {
 							tpl.hide();
@@ -312,23 +311,23 @@ $(function () {
 						});
 					},'html');
 					break;
-				
+
 				case 'digitalglobe':
-					$.get("tpl/digitalglobe.html", function(data) { 
+					$.get("tpl/digitalglobe.html", function(data) {
 						var tpl = $(data);
-					
+
 						var mono, stereo;
 						$.get('php/digitalglobe.php', function(data) {
-							if (pageData.infoName == 'DG 1-day') { 
+							if (pageData.infoName == 'DG 1-day') {
 								mono = data.dg_imagery_index_all_1day;
 								stereo = data.dg_imagery_index_stereo_1day;
-							} else if (pageData.infoName == 'DG 7-day') { 
+							} else if (pageData.infoName == 'DG 7-day') {
 								mono = data.dg_imagery_index_all_7days;
 								stereo = data.dg_imagery_index_stereo_7days;
-							} else if (pageData.infoName == 'DG 1-month') { 
+							} else if (pageData.infoName == 'DG 1-month') {
 								mono = data.dg_imagery_index_all_1month;
 								stereo = data.dg_imagery_index_stereo_1month;
-							} else if (pageData.infoName == 'DG 9-month') { 
+							} else if (pageData.infoName == 'DG 9-month') {
 								mono = data.dg_imagery_index_all_9month;
 								stereo = data.dg_imagery_index_stereo_9month;
 							}
@@ -340,9 +339,9 @@ $(function () {
 							tpl.find('#countStereo').html(stereo.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 						},"json"
 						);
-						
+
 						tpl.find('#collectionUrl').attr('src',pageData.collection.jpg);
-						
+
 						// Replace
 						div.fadeOut(fadeOutDur, function() {
 							tpl.hide();
@@ -353,26 +352,26 @@ $(function () {
 					break;
 			}
 
-			
-			
+
+
 			// jQuery Stuff
 			$('img.modis').error(function() { $(this).attr('src', 'images/modis-no-image.png') });
 			$('img.webcam').error(function() { $(this).attr('src', 'images/webcam-no-image.png') });
 			$('#wxIcon').error(function() { $(this).attr('src', 'images/wx-no-image.png') });
-			
+
 			// Don't loop, reload the page?
 			//if (index == pages.length-1) { location.reload(true); }
-			
+
 			// Get the next index and setTimeout
 			index = (index + 1) % pages.length;
-			
-			window.pageRender = setTimeout(render,pageData.displayLength * 1000);		
+
+			window.pageRender = setTimeout(render,pageData.displayLength * 1000);
 		}
-		
-		$('#stopButton').hide();			
+
+		$('#stopButton').hide();
 		$('#stopButton').click(function() { clearTimeout(window.pageRender); });
 	}
-	
+
 	// Finally, call render()
 	render();
 });

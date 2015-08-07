@@ -22,7 +22,7 @@
     "Arctic",
     "Antarctica"
   ],
-  "author": "Brad Herried <herri147@umn.edu> (http://www.pgc.umn.edu/about/people/herried)",
+  "author": "Brad Herried <herri147@umn.edu>",
   "license": "MIT",
   "browser": "./src/js/settings.js",
   "devDependencies": {
