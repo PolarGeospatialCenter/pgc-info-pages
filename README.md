@@ -58,35 +58,35 @@ This configuration allows you to customize your location and deploy on your own 
 
 ## Credits & Data Sources
 #### Webcams
-* United States Antarctic Program (McMurdo Station, Palmer Station)
-  http://www.usap.gov/videoclipsandmaps/mcmwebcam.cfm
+* United States Antarctic Program (McMurdo Station, Palmer Station)   
+  http://www.usap.gov/videoclipsandmaps/mcmwebcam.cfm   
   http://www.usap.gov/videoclipsandmaps/palWebCam.cfm
-* NOAA Earth System Research Laboratory (South Pole)
+* NOAA Earth System Research Laboratory (South Pole)   
   http://www.esrl.noaa.gov/gmd/obop/spo/livecamera.html
-* University of Alaska - Fairbanks Sea Ice Group (Barrow)
+* University of Alaska - Fairbanks Sea Ice Group (Barrow)   
   http://seaice.alaska.edu/gi/observatories/barrow_webcam
-* Toolik Field Station (Toolik)
+* Toolik Field Station (Toolik)   
   http://toolik.alaska.edu/edc
-* College of Science & Engineering (University of Minnesota)
+* College of Science & Engineering (University of Minnesota)   
   http://cse.umn.edu/dashboard/webcam
-* CH2M Hill Polar Services (Summit Station)
+* CH2M Hill Polar Services (Summit Station)   
   http://www.summitcamp.org/status/webcam
 
 
 #### Data & Photographs
-* NASA Worldview Application (MODIS Satellite Imagery)
+* NASA Worldview Application (MODIS Satellite Imagery)   
   https://earthdata.nasa.gov/labs/worldview
-* DigitalGlobe, Inc. (Satellite Imagery Acquistion)
+* DigitalGlobe, Inc. (Satellite Imagery Acquistion)   
   http://www.digitalglobe.com
-* MarineTraffic.org (Vessel Maps)  
+* MarineTraffic.org (Vessel Maps)   
   http://www.marinetraffic.org
-* Fourmilab (Earth & Moon Viewer)
+* Fourmilab (Earth & Moon Viewer)   
   http://www.fourmilab.ch/earthview
-* World Weather Online (Weather API)
+* World Weather Online (Weather API)   
   http://www.worldweatheronline.com
 
 #### Development
-* jQuery
+* jQuery   
   http://www.jquery.com
-* Moment.js
+* Moment.js   
   http://momentjs.com
