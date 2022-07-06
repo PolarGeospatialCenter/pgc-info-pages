@@ -55,7 +55,7 @@ $(function () {
 		userLocation = 55108; // Defaults to Saint Paul, Minnesota
 	}
 
-	$.get('http://api.worldweatheronline.com/free/v2/weather.ashx',
+	$.get('https://api.worldweatheronline.com/free/v2/weather.ashx',
 		{
 			q :	userLocation,
 			key	: 'c25b7a54912289dc77ca682b16590',
@@ -151,7 +151,7 @@ $(function () {
 					$.get('tpl/'+pageData.template+'.html',function(data) {
 						var tpl = $(data);
 						tpl.find('#vesselName').html(pageData.vessel.name);
-						tpl.find('#marinetraffic').attr('src','http://www.marinetraffic.com/en/ais/embed/zoom:'+pageData.vessel.zoom+'/centery:0/centerx:0/maptype:2/shownames:true/mmsi:'+pageData.vessel.mmsi+'/fleet:/showmenu:false/remember:false');
+						tpl.find('#marinetraffic').attr('src','https://www.marinetraffic.com/en/ais/embed/zoom:'+pageData.vessel.zoom+'/centery:0/centerx:0/maptype:2/shownames:true/mmsi:'+pageData.vessel.mmsi+'/fleet:/showmenu:false/remember:false');
 
 						//div.replaceWith(tpl);
 						div.html(tpl);
@@ -223,7 +223,7 @@ $(function () {
 						tpl.find('#timeZone').html(moment().tz(pageData.timeZone).format('Z') + ' UTC');
 
 						// WxBox
-						$.get('http://api.worldweatheronline.com/free/v2/weather.ashx',
+						$.get('https://api.worldweatheronline.com/free/v2/weather.ashx',
 					    	{
 								q : pageData.infoLat+","+pageData.infoLon,
 								key : 'c25b7a54912289dc77ca682b16590',
@@ -269,7 +269,7 @@ $(function () {
 
 						// Vessels
 						if (pageData.vessel.show == true) {
-							tpl.find('#marinetraffic').attr('src','http://www.marinetraffic.com/en/ais/embed/zoom:'+pageData.vessel.zoom+'/centery:'+pageData.infoLat+'/centerx:'+pageData.infoLon+'/maptype:2/border:0/shownames:true/remember:false/fleet:lpaul@umn.edu/showmenu:false');
+							tpl.find('#marinetraffic').attr('src','https://www.marinetraffic.com/en/ais/embed/zoom:'+pageData.vessel.zoom+'/centery:'+pageData.infoLat+'/centerx:'+pageData.infoLon+'/maptype:2/border:0/shownames:true/remember:false/fleet:lpaul@umn.edu/showmenu:false');
 						}
 						else {
 							tpl.find('.content-vessels').html('');
