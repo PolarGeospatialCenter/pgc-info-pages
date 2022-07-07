@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: info-pages
+  namespace: placeholder
+spec:
+  template:
+    spec:
+      containers:
+        - name: frontend
+          image: pgc-docker.artifactory.umn.edu/pgc-info-pages:IMAGE_TAG

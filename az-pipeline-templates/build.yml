@@ -1,0 +1,8 @@
+steps:
+  - task: Docker@2
+    inputs:
+      containerRegistry: 'pgc-docker.artifactory.umn.edu - pgcdocker'
+      repository: 'pgc-info-pages'
+      command: 'buildAndPush'
+      Dockerfile: '**/Dockerfile'
+      tags: '$(Build.SourceVersion)'

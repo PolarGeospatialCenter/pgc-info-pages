@@ -1,0 +1,34 @@
+# add branches to trigger builds here
+trigger:
+  - dev
+  - master
+
+pool:
+  name: default
+
+variables:
+  isProd: $[eq(variables['Build.SourceBranch'], 'refs/heads/master')]
+  isDev: $[eq(variables['Build.SourceBranch'], 'refs/heads/dev')]
+
+jobs:
+  - job: dev
+    condition: and(succeeded(), eq(variables.isDev, 'true'))
+    workspace:
+      clean: all
+    steps:
+      - template: az-pipeline-templates/build.yml
+      - template: az-pipeline-templates/deploy.yml
+        parameters:
+          env: dev
+          namespace: info-pages-dev
+          k8sSvcConnection: "AKS k8s-tst cluster - info-pages-dev"
+  - job: prd
+    condition: and(succeeded(), eq(variables.isDev, 'false'))
+    workspace:
+      clean: all
+    steps:
+      - template: az-pipeline-templates/deploy.yml
+        parameters:
+          env: prd
+          namespace: info-pages-prd
+          k8sSvcConnection: "AKS k8s-tst cluster - info-pages-prd"
