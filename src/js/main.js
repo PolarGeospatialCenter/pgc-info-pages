@@ -224,12 +224,12 @@ $(function () {
 
 						// WxBox
 						$.get('https://api.worldweatheronline.com/free/v2/weather.ashx',
-					    	{
+						    {
 								q : pageData.infoLat+","+pageData.infoLon,
 								key : 'c25b7a54912289dc77ca682b16590',
 								format : 'json'
 							},
-					    	function(response) {
+							function(response) {
 								tpl.find('#wxDegF').html(response.data.current_condition[0].temp_F + '°F');
 								tpl.find('#wxDegC').html(response.data.current_condition[0].temp_C + '°C');
 								tpl.find('#wxWindMPH').html(response.data.current_condition[0].windspeedMiles + ' mph');
