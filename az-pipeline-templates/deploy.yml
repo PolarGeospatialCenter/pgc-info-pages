@@ -4,6 +4,9 @@ parameters:
   - name: env
     type: string
     default: dev
+  - name: overlay
+    type: string
+    default: dev
   - name: k8sSvcConnection
     type: string
     default: "AKS k8s-tst cluster - pgc-apps"
@@ -14,7 +17,7 @@ steps:
     inputs:
       targetType: 'inline'
       workingDirectory: $(Build.SourcesDirectory)
-      script: sed "s/IMAGE_TAG/${IMAGE_TAG}/g" k8s/overlays/${{ parameters.env }}/deployment_image.template.yml > k8s/overlays/${{ parameters.env }}/deployment_image.yml
+      script: sed "s/IMAGE_TAG/${IMAGE_TAG}/g" k8s/overlays/${{ parameters.overlay }}/deployment_image.template.yml > k8s/overlays/${{ parameters.overlay }}/deployment_image.yml
       failOnStderr: true
     env:
       IMAGE_TAG: $(Build.SourceVersion)
@@ -24,7 +27,7 @@ steps:
     inputs:
       action: bake
       renderType: kustomize
-      kustomizationPath: 'k8s/overlays/${{ parameters.env }}'
+      kustomizationPath: 'k8s/overlays/${{ parameters.overlay }}'
   - task: KubernetesManifest@0
     displayName: Deploy manifests
     inputs:
