@@ -1,0 +1,46 @@
+parameters:
+  - name: namespace
+    type: string
+  - name: env
+    type: string
+    default: dev
+  - name: overlay
+    type: string
+    default: dev
+  - name: k8sSvcConnection
+    type: string
+    default: "AKS k8s-tst cluster - pgc-apps"
+
+steps:
+  - task: Bash@3
+    displayName: update image tag
+    inputs:
+      targetType: 'inline'
+      workingDirectory: $(Build.SourcesDirectory)
+      script: sed "s/IMAGE_TAG/${IMAGE_TAG}/g" k8s/overlays/${{ parameters.overlay }}/deployment_image.template.yml > k8s/overlays/${{ parameters.overlay }}/deployment_image.yml
+      failOnStderr: true
+    env:
+      IMAGE_TAG: $(Build.SourceVersion)
+  - task: KubernetesManifest@0
+    name: bake
+    displayName: Bake K8s manifests from kustomization path
+    inputs:
+      action: bake
+      renderType: kustomize
+      kustomizationPath: 'k8s/overlays/${{ parameters.overlay }}'
+  - task: KubernetesManifest@0
+    displayName: Deploy manifests
+    inputs:
+      kubernetesServiceConnection: '${{ parameters.k8sSvcConnection }}'
+      namespace: '${{ parameters.namespace }}'
+      manifests: $(bake.manifestsBundle)
+      rolloutStatusTimeout: 30
+  - task: Kubernetes@1
+    displayName: Restart deployment
+    inputs:
+      connectionType: 'Kubernetes Service Connection'
+      kubernetesServiceEndpoint: '${{ parameters.k8sSvcConnection }}'
+      versionSpec: '1.15.0'
+      namespace: '${{ parameters.namespace }}'
+      command: 'rollout'
+      arguments: 'restart deployment info-pages-${{ parameters.env }}'

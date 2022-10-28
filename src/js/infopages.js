@@ -41,56 +41,56 @@
 			"template": "digitalglobe",
 			"displayLength": 5,
 			"infoName": "DG 1-day",
-			"collection" : { "show": true, "jpg": "http://repository.agic.umn.edu/website/infopages/DigitalGlobe_1Day.jpg", "json":"http://repository.agic.umn.edu/website/infopages/DigitalGlobe_Count.json" }
+			"collection" : { "show": true, "jpg": "https://repository.pgc.umn.edu/infopages/DigitalGlobe_1Day.jpg", "json":"https://repository.pgc.umn.edu/infopages/DigitalGlobe_Count.json" }
 		},
 		{	"index": 3,
 			"visible": true,
 			"template": "digitalglobe",
 			"displayLength": 5,
 			"infoName": "DG 7-day",
-			"collection" : { "show": true, "jpg": "http://repository.agic.umn.edu/website/infopages/DigitalGlobe_7Day.jpg", "json":"http://repository.agic.umn.edu/website/infopages/DigitalGlobe_Count.json" }
+			"collection" : { "show": true, "jpg": "https://repository.pgc.umn.edu/infopages/DigitalGlobe_7Day.jpg", "json":"https://repository.pgc.umn.edu/infopages/DigitalGlobe_Count.json" }
 		},
 		{	"index": 4,
 			"visible": true,
 			"template": "digitalglobe",
 			"displayLength": 5,
 			"infoName": "DG 1-month",
-			"collection" : { "show": true, "jpg": "http://repository.agic.umn.edu/website/infopages/DigitalGlobe_1Month.jpg", "json":"http://repository.agic.umn.edu/website/infopages/DigitalGlobe_Count.json" }
+			"collection" : { "show": true, "jpg": "https://repository.pgc.umn.edu/infopages/DigitalGlobe_1Month.jpg", "json":"https://repository.pgc.umn.edu/infopages/DigitalGlobe_Count.json" }
 		},
 		{	"index": 5,
 			"visible": true,
 			"template": "digitalglobe",
 			"displayLength": 5,
 			"infoName": "DG 9-month",
-			"collection" : { "show": true, "jpg": "http://repository.agic.umn.edu/website/infopages/DigitalGlobe_9Month.jpg", "json":"http://repository.agic.umn.edu/website/infopages/DigitalGlobe_Count.json" }
+			"collection" : { "show": true, "jpg": "https://repository.pgc.umn.edu/infopages/DigitalGlobe_9Month.jpg", "json":"https://repository.pgc.umn.edu/infopages/DigitalGlobe_Count.json" }
 		},
 		{	"index": 6,
 			"visible": true,
 			"template": "digitalglobe",
 			"displayLength": 5,
 			"infoName": "DG 1-day Polar",
-			"collection" : { "show": true, "jpg": "http://repository.agic.umn.edu/website/infopages/DigitalGlobe_1Day_Polar.jpg", "json":"" }
+			"collection" : { "show": true, "jpg": "https://repository.pgc.umn.edu/infopages/DigitalGlobe_1Day_Polar.jpg", "json":"" }
 		},
 		{	"index": 7,
 			"visible": true,
 			"template": "digitalglobe",
 			"displayLength": 5,
 			"infoName": "DG 7-day Polar",
-			"collection" : { "show": true, "jpg": "http://repository.agic.umn.edu/website/infopages/DigitalGlobe_7Day_Polar.jpg", "json":"" }
+			"collection" : { "show": true, "jpg": "https://repository.pgc.umn.edu/infopages/DigitalGlobe_7Day_Polar.jpg", "json":"" }
 		},
 		{	"index": 8,
 			"visible": true,
 			"template": "digitalglobe",
 			"displayLength": 5,
 			"infoName": "DG 1-month Polar",
-			"collection" : { "show": true, "jpg": "http://repository.agic.umn.edu/website/infopages/DigitalGlobe_1Month_Polar.jpg", "json":"" }
+			"collection" : { "show": true, "jpg": "https://repository.pgc.umn.edu/infopages/DigitalGlobe_1Month_Polar.jpg", "json":"" }
 		},
 		{	"index": 9,
 			"visible": true,
 			"template": "digitalglobe",
 			"displayLength": 5,
 			"infoName": "DG 9-month Polar",
-			"collection" : { "show": true, "jpg": "http://repository.agic.umn.edu/website/infopages/DigitalGlobe_9Month_Polar.jpg", "json":"" }
+			"collection" : { "show": true, "jpg": "https://repository.pgc.umn.edu/infopages/DigitalGlobe_9Month_Polar.jpg", "json":"" }
 		},
 		{	"index": 10,
 			"visible": true,
@@ -104,9 +104,9 @@
 			"infoPhoto": "",
 			"modis" : {
 				"show": true,
-				"url": "http://repository.agic.umn.edu/website/infopages/MODISPGC"
+				"url": "https://repository.pgc.umn.edu/infopages/MODISPGC"
 			},
-			"webcam" : { "show": true, "name": "University of Minnesota", "url": "http://repository.agic.umn.edu/website/infopages/WebcamUMN.jpg" },
+			"webcam" : { "show": true, "name": "University of Minnesota", "url": "https://repository.pgc.umn.edu/infopages/WebcamUMN.jpg" },
 			"vessel" : { "show": false, "zoom": 8 }
 		},
 		{	"index": 11,
@@ -121,10 +121,10 @@
 			"infoPhoto": "img/mcm.jpg",
 			"modis" : {
 				"show": true,
-				"url": "http://repository.agic.umn.edu/website/infopages/MODISMCM"
+				"url": "https://repository.pgc.umn.edu/infopages/MODISMCM"
 			},
-			"webcam" : { "show": true, "name": "Arrival Heights", "url": "http://images.webcams.travel/webcam/1284734042.jpg" },
-			//"webcam" : { "show": true, "query": { "location":"McMurdo", "name":"Arrival Heights", "camera":"arrivalHeights"}, "url": "http://www.usap.gov/videoClipsAndMaps/SouthPoleWebcam/" },
+			"webcam" : { "show": true, "name": "Arrival Heights", "url": "https://images.webcams.travel/webcam/1284734042.jpg" },
+			//"webcam" : { "show": true, "query": { "location":"McMurdo", "name":"Arrival Heights", "camera":"arrivalHeights"}, "url": "https://www.usap.gov/videoClipsAndMaps/SouthPoleWebcam/" },
 			"vessel" : { "show": true, "zoom": 8 }
 		},
 		{
@@ -140,10 +140,10 @@
 			"infoPhoto": "img/palmer.jpg",
 			"modis" : {
 				"show": true,
-				"url": "http://repository.agic.umn.edu/website/infopages/MODISPAL"
+				"url": "https://repository.pgc.umn.edu/infopages/MODISPAL"
 			},
-			"webcam" : { "show": true, "name": "Palmer Station", "url": "http://images.webcams.travel/webcam/1359242806.jpg" },
-			//"webcam" : { "show": true, "query": { "location":"Palmer", "name":"Palmer Station", "camera":"palmer"}, "url": "http://www.usap.gov/videoClipsAndMaps/SouthPoleWebcam/" },
+			"webcam" : { "show": true, "name": "Palmer Station", "url": "https://images.webcams.travel/webcam/1359242806.jpg" },
+			//"webcam" : { "show": true, "query": { "location":"Palmer", "name":"Palmer Station", "camera":"palmer"}, "url": "https://www.usap.gov/videoClipsAndMaps/SouthPoleWebcam/" },
 			"vessel" : { "show": true, "zoom": 8 }
 		},
 		{
@@ -159,10 +159,10 @@
 			"infoPhoto": "img/pole.jpg",
 			"modis" : {
 				"show": true,
-				"url": "http://repository.agic.umn.edu/website/infopages/MODISPOL"
+				"url": "https://repository.pgc.umn.edu/infopages/MODISPOL"
 			},
-			"webcam" : { "show": true, "name": "Atmospheric Research Observatory (ARO)", "url": "http://www.esrl.noaa.gov/gmd/webdata/spo/webcam/cmdlfullsize.jpg" },
-			//"webcam" : { "show": true, "query": { "location":"South+Pole", "name":"Atmospheric Research Observatory", "camera":"aro"},"url": "http://www.usap.gov/videoClipsAndMaps/SouthPoleWebcam/" },
+			"webcam" : { "show": true, "name": "Atmospheric Research Observatory (ARO)", "url": "https://www.esrl.noaa.gov/gmd/webdata/spo/webcam/cmdlfullsize.jpg" },
+			//"webcam" : { "show": true, "query": { "location":"South+Pole", "name":"Atmospheric Research Observatory", "camera":"aro"},"url": "https://www.usap.gov/videoClipsAndMaps/SouthPoleWebcam/" },
 			"vessel" : { "show": false, "zoom": 8 }
 		},
 		{
@@ -178,10 +178,10 @@
 			"infoPhoto": "img/pole.jpg",
 			"modis" : {
 				"show": true,
-				"url": "http://repository.agic.umn.edu/website/infopages/MODISBAR",
+				"url": "https://repository.pgc.umn.edu/infopages/MODISBAR",
 				"rotation": 270
 			},
-			"webcam" : { "show": true, "name": "Barrow Sea Ice Cam", "url": "http://repository.agic.umn.edu/website/infopages/WebcamBarrow.jpg" },
+			"webcam" : { "show": true, "name": "Barrow Sea Ice Cam", "url": "https://repository.pgc.umn.edu/infopages/WebcamBarrow.jpg" },
 			"vessel" : { "show": true, "zoom": 8 }
 		},
 		{
@@ -197,10 +197,10 @@
 			"infoPhoto": "img/pole.jpg",
 			"modis" : {
 				"show": true,
-				"url": "http://repository.agic.umn.edu/website/infopages/MODISTFS",
+				"url": "https://repository.pgc.umn.edu/infopages/MODISTFS",
 				"rotation": 270
 			},
-			"webcam" : { "show": true, "name": "Toolik Lake", "url": "http://repository.agic.umn.edu/website/infopages/WebcamToolik.jpg" },
+			"webcam" : { "show": true, "name": "Toolik Lake", "url": "https://repository.pgc.umn.edu/infopages/WebcamToolik.jpg" },
 			"vessel" : { "show": false, "zoom": 8 }
 		},
 		{
@@ -216,7 +216,7 @@
 			"infoPhoto": "img/pole.jpg",
 			"modis" : {
 				"show": true,
-				"url": "http://repository.agic.umn.edu/website/infopages/MODISKAN",
+				"url": "https://repository.pgc.umn.edu/infopages/MODISKAN",
 			},
 			"webcam" : { "show": false, "name": "",  "url": "" },
 			"vessel" : { "show": true, "zoom": 8 }
@@ -234,9 +234,9 @@
 			"infoPhoto": "img/pole.jpg",
 			"modis" : {
 				"show": true,
-				"url": "http://repository.agic.umn.edu/website/infopages/MODISSUM"
+				"url": "https://repository.pgc.umn.edu/infopages/MODISSUM"
 			},
-			"webcam" : { "show": true, "name": "Greenhouse &amp; Fuel Pit", "url": "http://repository.agic.umn.edu/website/infopages/WebcamSummit.jpg" },
+			"webcam" : { "show": true, "name": "Greenhouse &amp; Fuel Pit", "url": "https://repository.pgc.umn.edu/infopages/WebcamSummit.jpg" },
 			"vessel" : { "show": false, "zoom": 8 }
 		},
 		{	"index": 18,
