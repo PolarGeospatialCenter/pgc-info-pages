@@ -39,7 +39,7 @@ jobs:
           env: dev
           overlay: dev
           namespace: info-pages-dev
-          k8sSvcConnection: "AKS k8s-tst cluster - info-pages-dev"
+          k8sSvcConnection: "k8s-prd info-pages-dev"
   - job: DeployTestClusterPrd
     dependsOn:
       - ImageDoesNotExist
@@ -53,4 +53,4 @@ jobs:
           env: prd
           overlay: prd
           namespace: info-pages-prd
-          k8sSvcConnection: "AKS k8s-tst cluster - info-pages-prd"
+          k8sSvcConnection: "k8s-prd info-pages-prd"
