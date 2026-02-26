@@ -118,7 +118,7 @@
 			"infoLat": -77.845188,
 			"infoLon": 166.669057,
 			"timeZone": "Antarctica/McMurdo",
-			"infoPhoto": "img/mcm.jpg",
+			"infoPhoto": "images/mcm.jpg",
 			"modis" : {
 				"show": true,
 				"url": "https://data.pgc.umn.edu/maps/infopages/MODISMCM"
@@ -137,7 +137,7 @@
 			"infoLat": -64.774216,
 			"infoLon": -64.052185,
 			"timeZone": "Antarctica/Palmer",
-			"infoPhoto": "img/palmer.jpg",
+			"infoPhoto": "images/palmer.jpg",
 			"modis" : {
 				"show": true,
 				"url": "https://data.pgc.umn.edu/maps/infopages/MODISPAL"
@@ -156,7 +156,7 @@
 			"infoLat": -90.00000,
 			"infoLon": 0.000000,
 			"timeZone": "Antarctica/South_Pole",
-			"infoPhoto": "img/pole.jpg",
+			"infoPhoto": "images/pole.jpg",
 			"modis" : {
 				"show": true,
 				"url": "https://data.pgc.umn.edu/maps/infopages/MODISPOL"
@@ -175,7 +175,7 @@
 			"infoLat": 71.295556,
 			"infoLon": -156.766389,
 			"timeZone": "America/Anchorage",
-			"infoPhoto": "img/pole.jpg",
+			"infoPhoto": "images/pole.jpg",
 			"modis" : {
 				"show": true,
 				"url": "https://data.pgc.umn.edu/maps/infopages/MODISBAR",
@@ -194,7 +194,7 @@
 			"infoLat": 68.627483,
 			"infoLon": -149.594940,
 			"timeZone": "America/Anchorage",
-			"infoPhoto": "img/pole.jpg",
+			"infoPhoto": "images/pole.jpg",
 			"modis" : {
 				"show": true,
 				"url": "https://data.pgc.umn.edu/maps/infopages/MODISTFS",
@@ -213,7 +213,7 @@
 			"infoLat": 67.008611,
 			"infoLon": -50.689167,
 			"timeZone": "America/Godthab",
-			"infoPhoto": "img/pole.jpg",
+			"infoPhoto": "images/pole.jpg",
 			"modis" : {
 				"show": true,
 				"url": "https://data.pgc.umn.edu/maps/infopages/MODISKAN",
@@ -231,7 +231,7 @@
 			"infoLat": 67.008611,
 			"infoLon": -50.689167,
 			"timeZone": "America/Godthab",
-			"infoPhoto": "img/pole.jpg",
+			"infoPhoto": "images/pole.jpg",
 			"modis" : {
 				"show": true,
 				"url": "https://data.pgc.umn.edu/maps/infopages/MODISSUM"
