@@ -1,3 +1,3 @@
 <?php
-echo file_get_contents('https://repository.pgc.umn.edu/infopages/DigitalGlobe_Count.json');
+echo file_get_contents('https://data.pgc.umn.edu/maps/infopages/DigitalGlobe_Count.json');
 ?>
