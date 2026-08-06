@@ -6,7 +6,7 @@ var screenfull = require('screenfull');
 
 window.pageRender = '';
 
-//version tag to trigger image builds 1.0
+//version tag to trigger image builds 1.1
 
 $(function () {
 
