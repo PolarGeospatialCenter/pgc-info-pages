@@ -28,12 +28,14 @@
   "devDependencies": {
     "browser-sync": "^2.6.9",
     "browserify": "^10.0.0",
-    "gulp": "^3.8.11",
-    "gulp-concat-css": "^2.2.0",
+    "del": "^8.0.1",
+    "gulp": "^5.0.1",
+    "gulp-concat-css": "^3.1.0",
     "gulp-imagemin": "^2.2.1",
     "gulp-rimraf": "^0.1.1",
-    "gulp-uglify": "^1.2.0",
-    "vinyl-source-stream": "^1.1.0"
+    "gulp-uglify": "^3.0.2",
+    "vinyl": "^3.0.1",
+    "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
     "jquery": "^2.1.4",
