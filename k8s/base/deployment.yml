@@ -8,6 +8,8 @@ spec:
   replicas: 1
   template:
     spec:
+      imagePullSecrets:
+        - name: artifactory-regcred
       containers:
       - name: frontend
         image: placeholder
