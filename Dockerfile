@@ -1,5 +1,5 @@
 # Stage 1: Build the static assets
-FROM pgc-docker.artifactory.umn.edu/mirror/node:22 AS builder
+FROM pgc-docker.artifactory.umn.edu/library/node:22 AS builder
 
 WORKDIR /app
 
@@ -12,7 +12,7 @@ COPY . .
 RUN npx gulp dist
 
 # Stage 2: Serve static files with Nginx
-FROM pgc-docker.artifactory.umn.edu/mirror/nginxinc/nginx-unprivileged:1.29.0
+FROM pgc-docker.artifactory.umn.edu/nginxinc/nginx-unprivileged:1.29.0
 
 # Copy built assets from builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
