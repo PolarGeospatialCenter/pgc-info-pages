@@ -91,7 +91,7 @@ function distFiles() {
         .pipe(uglify())
         .pipe(gulp.dest('./dist'));
 
-    return gulp.src(['./build/**', '!./build/main.js'])
+    return gulp.src(['./build/**', '!./build/main.js'], { encoding: false })
         .pipe(gulp.dest('./dist'));
 }
 
