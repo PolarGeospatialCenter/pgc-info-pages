@@ -55,7 +55,7 @@ function css() {
 
 // Minify images
 function images() {
-    return gulp.src('./src/images/**')
+    return gulp.src('./src/images/**', { encoding: false })
         .pipe(imagemin())
         .pipe(gulp.dest('./build/images'))
         .pipe(reload({ stream: true }));
