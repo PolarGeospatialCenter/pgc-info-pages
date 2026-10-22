@@ -38,7 +38,8 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
-    "jquery": "^3.7.1",
+    "follow-redirects": "^1.16.1",
+    "jquery": "^2.1.4",
     "moment": "^2.10.2",
     "moment-timezone": "^0.6.5",
     "screenfull": "^2.0.0"
