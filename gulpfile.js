@@ -55,7 +55,7 @@ function css() {
 
 // Minify images
 function images() {
-    return gulp.src('./src/images/**')
+    return gulp.src('./src/images/**', { encoding: false })
         .pipe(imagemin())
         .pipe(gulp.dest('./build/images'))
         .pipe(reload({ stream: true }));
@@ -91,7 +91,7 @@ function distFiles() {
         .pipe(uglify())
         .pipe(gulp.dest('./dist'));
 
-    return gulp.src(['./build/**', '!./build/main.js'])
+    return gulp.src(['./build/**', '!./build/main.js'], { encoding: false })
         .pipe(gulp.dest('./dist'));
 }
 
