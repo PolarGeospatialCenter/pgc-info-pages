@@ -1,5 +1,5 @@
 # Stage 1: Build the static assets
-FROM pgc-docker.artifactory.umn.edu/library/node:22 AS builder
+FROM pgc-docker.artifactory.umn.edu/library/node:22.23.4 AS builder
 
 WORKDIR /app
 
